@@ -10,67 +10,11 @@
 
     <div class="row">
 
-        <div class="col-sm-6 col-xl-4 col-lg-6">
-            <div class="card o-hidden border-0">
-                <div class="bg-primary b-r-4 card-body">
-                    <div class="media static-top-widget">
-                        <div class="media-body"><span class="m-0">Total booking</span>
-                            <h4 class="mb-0 counter">10</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-xl-4 col-lg-6">
-            <div class="card o-hidden border-0">
-                <div class="bg-secondary b-r-4 card-body">
-                    <div class="media static-top-widget">
-                        <div class="align-self-center text-center">
-                        </div>
-                        <div class="media-body"><span class="m-0">Booking This month</span>
-                            <h4 class="mb-0 counter">30</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-xl-4 col-lg-6">
-            <div class="card o-hidden border-0">
-                <div class="bg-primary b-r-4 card-body">
-                    <div class="media static-top-widget">
-                        <div class="media-body"><span class="m-0">Total Company</span>
-                            <h4 class="mb-0 counter">9</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-xl-4 col-lg-6">
-            <div class="card o-hidden border-0">
-                <div class="bg-primary b-r-4 card-body">
-                    <div class="media static-top-widget">
-                        <div class="media-body"><span class="m-0">Total User</span>
-                            <h4 class="mb-0 counter">9</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+   
+        
 
 
-        {{--        <div class="col-xl-12 col-md-12 box-col-12">--}}
-        {{--            <div class="card">--}}
-        {{--                <div class="card-header pb-0">--}}
-        {{--                    <h5>Daily Submission Chart(last 30 days)</h5>--}}
-        {{--                </div>--}}
-        {{--                <div class="card-body chart-block">--}}
-        {{--                    <canvas id="dayly_submission_chart" height="400px"></canvas>--}}
-        {{--                </div>--}}
-        {{--            </div>--}}
-        {{--        </div>--}}
+              
 
 
         {{--<div class="col-xl-6 xl-100 box-col-12">--}}
@@ -95,7 +39,7 @@
         {{--                    </div>--}}
         {{--                  </div>--}}
         {{--                </div>--}}
-        {{--              </div>--}}
+                     {{-- </div> --}}
 
 
 

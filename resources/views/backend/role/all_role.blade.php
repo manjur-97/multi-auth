@@ -36,7 +36,7 @@
                         <td>{{$data->slag}}</td>
                         <td>
                             <a href="{{route('admin.edit_role',$data->id)}}" class="btn btn-success btn-sm">Edit</a>
-{{--                            <a href="#" onclick="deletePost({{$data->id}})" class="btn btn-danger btn-sm">Delete</a>--}}
+                           {{-- <a href="#" onclick="deletePost({{$data->id}})" class="btn btn-danger btn-sm">Delete</a> --}}
                         </td>
                     </tr>
                 @endforeach

@@ -28,120 +28,79 @@ $currentControllerName = Request::segment(2);
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'hall' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.hall') }}">
-                            <i class="bookmark-icon" data-feather="airplay"></i>
-                            <span>Halls</span></a>
+
+
+                    <li class="dropdown"><a class="nav-link menu-title " href="javascript:void(0)"><i
+                                data-feather="list"></i><span>Indent</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="" class="{{ Request::is('*/*/all_role') ? 'active' : '' }}">Option</a>
+                            </li>
+                            <li><a href="" class="{{ Request::is('*/*/add_role') ? 'active' : '' }}">Option</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'floor' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.floor') }}">
-                            <i data-feather="sliders"></i>
-                            <span>Floors</span>
-                        </a>
+                    <li class="dropdown"><a class="nav-link menu-title " href="javascript:void(0)"><i
+                                data-feather="list"></i><span>Tender</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="" class="{{ Request::is('*/*/all_role') ? 'active' : '' }}">Option</a>
+                            </li>
+                            <li><a href="" class="{{ Request::is('*/*/add_role') ? 'active' : '' }}">Option</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'shift' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.shift') }}">
-                            <i data-feather="clock"></i>
-                            <span>Shifts</span>
-                        </a>
+                    <li class="dropdown"><a class="nav-link menu-title " href="javascript:void(0)"><i
+                                data-feather="list"></i><span>Specification</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="" class="">Option</a>
+                            </li>
+                            <li><a href="" class="">Option</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'hall_accessories_facilities' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.hall_accessories_facilities') }}">
-                            <i data-feather="command"></i>
-                            <span>Accessories Facilities</span>
-                        </a>
+                    <li class="dropdown"><a class="nav-link menu-title " href="javascript:void(0)"><i
+                                data-feather="list"></i><span>Contact</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="" class="">Option</a>
+                            </li>
+                            <li><a href="" class="">Option</a>
+                            </li>
+                        </ul>
                     </li>
-                    
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'user_category' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.user_category') }}">
-                            <i data-feather="user-check"></i>
-                            <span>User Categories</span>
-                        </a>
+                    <li class="dropdown"><a class="nav-link menu-title " href="javascript:void(0)"><i
+                                data-feather="list"></i><span>I-Note</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="" class="">Option</a>
+                            </li>
+                            <li><a href="" class="">Option</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'hall_price' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.hall_price') }}">
-                            <i data-feather="dollar-sign"></i>
-                            <span>Hall Pricing</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'others_prices' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.others_prices') }}">
-                            <i data-feather="dollar-sign"></i>
-                            <span>Others Pricing</span>
-                        </a>
-                    </li>
-                   
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'holiday' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.holidays') }}">
-                            <i data-feather="slash"></i>
-                            <span>Holiday</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'ramadan' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.ramadans') }}">
-                            <i data-feather="loader"></i>
-                            <span>Ramadan</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'booking' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.bookings') }}">
-                            <i data-feather="check-circle"></i>
-                            <span>Bookings</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'catering' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.caterings') }}">
-                            <i data-feather="list"></i>
-                            <span>Catering List</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'event' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.events') }}">
-                            <i data-feather="list"></i>
-                            <span>Event Managment List</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'guest' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.guests') }}">
-                            <i data-feather="users"></i>
-                            <span>Guest</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav {{ $currentControllerName == 'settings' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.settings') }}">
-                            <i data-feather="settings"></i>
-                            <span>Settings</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav 
-                        {{ $currentControllerName == 'booking_cancellation_rules' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.booking_cancellation_rules') }}">
-                            <i data-feather="x-square"></i>
-                            <span>Cancellation Rules</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link menu-title link-nav 
-                        {{ $currentControllerName == 'booking_change_rules' ? 'active_menu' : '' }}"
-                            href="{{ route('admin.booking_change_rules') }}">
-                            <i data-feather="minus-square"></i>
-                            <span>Change Rules</span>
-                        </a>
+                    <li class="dropdown"><a class="nav-link menu-title " href="javascript:void(0)"><i
+                                data-feather="list"></i><span>Settings</span></a>
+                        <ul class="nav-submenu menu-content">
+                            
+                            <li><a href=""
+                                class=""> <span>Document Type</span></a>
+                            </li>
+                            <li><a href=""
+                                class=""> <span>Department Management</span></a>
+                            </li>
+                            <li><a href=""
+                                class=""> <span>Section Management</span></a>
+                            </li>
+                            <li><a href=""
+                                class=""> <span>Army Division</span></a>
+                            </li>
+                            <li><a href=""
+                                class=""> <span>Army Battalion</span></a>
+                            </li>
+                            <li><a href=""
+                                class=""> <span>Army Unit</span></a>
+                            </li>
+                            <li><a href=""
+                                class=""> <span>Additional Documents</span></a>
+                            </li>
+                        </ul>
                     </li>
 
 

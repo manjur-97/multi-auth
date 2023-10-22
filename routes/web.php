@@ -17,7 +17,7 @@ Route::get('/clear_cache', function () {
 });
 
 
-Route::group(function () {
+Route::group(['prefix'=>'admin'],function () {
     Auth::routes(['register' => false]);
 });
 
