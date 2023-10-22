@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2023 at 05:16 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 7.4.30
+-- Generation Time: Oct 22, 2023 at 07:17 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `jobfair_main`
+-- Database: `hall_booking`
 --
 
 -- --------------------------------------------------------
@@ -49,10 +49,12 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `lastname`, `mobile`, `email`, `password`, `status_id`, `created_at`, `created_by`, `updated_at`, `version`, `remember_token`, `role_id`, `type`) VALUES
-(92, 'Super Admin', '', '01761955765', 'admin@gmail.com', '$2y$10$qBVDA/DLRKUVAS9bW39H9OBorvEDhS6MJGIqut.eZPCidaDLz4MEC', 1, '2021-02-07 11:07:04', 85, '2021-12-23 09:07:10', 1, 'yaNyoXznWypTbImSM0a72UMuuJ4vwxMxQJjMCr5RK3bgeTdZY1ccbnO3Brma', 11, 'admin'),
-(111, 'job fair admin', NULL, '01761955765', 'job_fair_admin@gmail.com', '$2y$10$LiZ4t.Jx06GzrQzJ5rDx9unFOKWN6rR5.apPnz1SIPDnd/M3Nh0xS', 1, '2022-05-19 05:44:13', 92, '2022-05-19 05:44:13', NULL, NULL, 11, 'admin'),
-(112, 'asdad', NULL, '123123', 'shuvo@gmail.com', '$2y$10$6zgT/gZSe8Nm8AgFiWLk6uMosN7kgc9HO8FJ4QNpBqFSA2ZcOfmEe', 1, '2023-09-12 03:45:44', 92, '2023-09-12 03:45:44', NULL, NULL, 11, 'admin'),
-(113, 'happy', NULL, '123123', 'shuvo@gmail.com', '$2y$10$WlWmbKIUQ7hR6GnJbRe/A.I73bDRk/7aBDigIrPFWd5bGShc58oxm', 1, '2023-09-12 03:46:56', 92, '2023-09-12 03:46:56', NULL, NULL, 12, 'admin');
+(92, 'Super Admin', '', '01761955765', 'admin@gmail.com', '$2y$10$qBVDA/DLRKUVAS9bW39H9OBorvEDhS6MJGIqut.eZPCidaDLz4MEC', 1, '2021-02-07 11:07:04', 85, '2021-12-23 09:07:10', 1, '53tBzgdXyHfDV7iILWRydoAdOwLq28qIrcCCj6eEYBJU3dtbFeiYhHNOzSdy', 11, 'admin'),
+(111, 'job fair admin', NULL, '01761955765', 'job_fair_admin@gmail.com', '$2y$10$LiZ4t.Jx06GzrQzJ5rDx9unFOKWN6rR5.apPnz1SIPDnd/M3Nh0xS', 2, '2022-05-19 05:44:13', 92, '2023-10-16 16:10:21', NULL, NULL, 11, 'admin'),
+(112, 'asdad', NULL, '123123', 'shuvo@gmail.com', '$2y$10$6zgT/gZSe8Nm8AgFiWLk6uMosN7kgc9HO8FJ4QNpBqFSA2ZcOfmEe', 2, '2023-09-12 03:45:44', 92, '2023-10-22 16:06:04', NULL, NULL, 11, 'admin'),
+(113, 'happy', NULL, '123123', 'shuvo@gmail.com', '$2y$10$WlWmbKIUQ7hR6GnJbRe/A.I73bDRk/7aBDigIrPFWd5bGShc58oxm', 2, '2023-09-12 03:46:56', 92, '2023-10-22 16:06:00', NULL, NULL, 12, 'admin'),
+(114, 'viewer', NULL, '123123', 'manjur@gmail.com', '$2y$10$W8Mu6MvfKpJUGuOR8k15SOY9rrc1EE7Oinyrala4Xz5K8kFqHXiWe', 2, '2023-10-16 16:15:29', 92, '2023-10-22 16:05:57', NULL, NULL, 20, 'admin'),
+(115, 'shuvo', NULL, '123123', 'shuvo@gmail.com', '$2y$10$ti3bZxFcUgHAuOWpNHaeQ.MDPrEBwxN7E5fl4Bn5FHY3q2pMxEtvi', 1, '2023-10-22 16:06:39', 92, '2023-10-22 16:06:39', NULL, NULL, 12, 'admin');
 
 -- --------------------------------------------------------
 
@@ -161,7 +163,17 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1);
+(4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(5, '2023_09_18_033200_create_floors_table', 2),
+(6, '2023_09_19_032952_create_halls_table', 3),
+(7, '2023_09_20_042546_create_shifts_table', 4),
+(8, '2023_09_20_062818_create_hall_accessories_facilities_table', 5),
+(9, '2023_09_21_034616_create_user_categories_table', 6),
+(10, '2023_09_21_052021_create_hall_prices_table', 7),
+(11, '2023_09_24_051424_create_others_prices_table', 8),
+(12, '2023_09_24_063127_create_settings_table', 9),
+(13, '2023_09_25_032226_create_booking_cancellation_rules_table', 10),
+(14, '2023_09_25_054810_create_booking_change_rules_table', 11);
 
 -- --------------------------------------------------------
 
@@ -251,12 +263,6 @@ CREATE TABLE `permission_roles` (
 --
 
 INSERT INTO `permission_roles` (`id`, `role_id`, `dynamic_route_id`, `url`, `created_at`, `updated_at`) VALUES
-(6978, 14, 1, 'adminDashboard', '2021-03-25 05:12:19', '2021-03-25 05:12:19'),
-(6979, 14, 91, 'admin/change_password', '2021-03-25 05:12:19', '2021-03-25 05:12:19'),
-(6980, 14, 92, 'admin/save_change_password', '2021-03-25 05:12:19', '2021-03-25 05:12:19'),
-(10432, 17, 1, 'adminDashboard', '2021-06-10 07:09:52', '2021-06-10 07:09:52'),
-(10433, 17, 91, 'admin/change_password', '2021-06-10 07:09:52', '2021-06-10 07:09:52'),
-(10434, 17, 92, 'admin/save_change_password', '2021-06-10 07:09:52', '2021-06-10 07:09:52'),
 (10467, 16, 1, 'adminDashboard', '2021-06-24 06:43:48', '2021-06-24 06:43:48'),
 (10468, 16, 91, 'admin/change_password', '2021-06-24 06:43:48', '2021-06-24 06:43:48'),
 (10469, 16, 92, 'admin/save_change_password', '2021-06-24 06:43:48', '2021-06-24 06:43:48'),
@@ -266,49 +272,41 @@ INSERT INTO `permission_roles` (`id`, `role_id`, `dynamic_route_id`, `url`, `cre
 (10473, 16, 95, 'suspend_user', '2021-06-24 06:43:48', '2021-06-24 06:43:48'),
 (10474, 16, 96, 'unsuspend_user', '2021-06-24 06:43:48', '2021-06-24 06:43:48'),
 (10475, 16, 130, 'test', '2021-06-24 06:43:48', '2021-06-24 06:43:48'),
-(13259, 18, 1, 'adminDashboard', '2021-09-27 00:27:50', '2021-09-27 00:27:50'),
-(13260, 18, 91, 'admin/change_password', '2021-09-27 00:27:50', '2021-09-27 00:27:50'),
-(13261, 18, 92, 'admin/save_change_password', '2021-09-27 00:27:50', '2021-09-27 00:27:50'),
 (13970, 12, 1, 'adminDashboard', '2021-12-29 22:37:31', '2021-12-29 22:37:31'),
 (13971, 12, 91, 'admin/change_password', '2021-12-29 22:37:31', '2021-12-29 22:37:31'),
 (13972, 12, 92, 'admin/save_change_password', '2021-12-29 22:37:31', '2021-12-29 22:37:31'),
 (13986, 12, 274, 'password/change_pasword', '2021-12-29 22:37:31', '2021-12-29 22:37:31'),
 (13987, 12, 275, 'password/save_change_password', '2021-12-29 22:37:31', '2021-12-29 22:37:31'),
-(13990, 19, 1, 'adminDashboard', '2022-01-12 02:02:39', '2022-01-12 02:02:39'),
-(13991, 19, 91, 'admin/change_password', '2022-01-12 02:02:39', '2022-01-12 02:02:39'),
-(13992, 19, 92, 'admin/save_change_password', '2022-01-12 02:02:39', '2022-01-12 02:02:39'),
-(13996, 19, 274, 'password/change_pasword', '2022-01-12 02:02:39', '2022-01-12 02:02:39'),
-(13997, 19, 275, 'password/save_change_password', '2022-01-12 02:02:39', '2022-01-12 02:02:39'),
-(14142, 11, 1, 'adminDashboard', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14143, 11, 91, 'admin/change_password', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14144, 11, 92, 'admin/save_change_password', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14145, 11, 3, 'dynamic_route', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14146, 11, 4, 'dynamic_route', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14147, 11, 14, 'delete_route', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14148, 11, 16, 'edit_route', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14149, 11, 19, 'update_route', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14150, 11, 5, 'role/all_role', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14151, 11, 6, 'role/add_role', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14152, 11, 8, 'save_role', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14153, 11, 11, 'edit_role', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14154, 11, 12, 'update_role', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14155, 11, 13, 'delete_role', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14156, 11, 9, 'all_user', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14157, 11, 10, 'save_user', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14158, 11, 93, 'edit_user', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14159, 11, 94, 'upadte_user', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14160, 11, 95, 'suspend_user', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14161, 11, 96, 'unsuspend_user', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14162, 11, 127, 'delete_user', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14163, 11, 130, 'test', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14164, 11, 131, 'menu/menu_create', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14165, 11, 133, 'menu/menu_save', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14166, 11, 134, 'menu/all_menu', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14167, 11, 135, 'menu/menu_search', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14168, 11, 138, 'menu/edit_menu', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14169, 11, 139, 'menu/update_menu', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14170, 11, 274, 'password/change_pasword', '2022-05-18 23:31:35', '2022-05-18 23:31:35'),
-(14171, 11, 275, 'password/save_change_password', '2022-05-18 23:31:35', '2022-05-18 23:31:35');
+(17735, 11, 1, 'adminDashboard', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17736, 11, 91, 'admin/change_password', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17737, 11, 92, 'admin/save_change_password', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17738, 11, 3, 'dynamic_route', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17739, 11, 4, 'dynamic_route', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17740, 11, 14, 'delete_route', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17741, 11, 16, 'edit_route', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17742, 11, 19, 'update_route', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17743, 11, 5, 'role/all_role', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17744, 11, 6, 'role/add_role', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17745, 11, 8, 'save_role', '2023-10-15 21:18:09', '2023-10-15 21:18:09'),
+(17746, 11, 11, 'edit_role', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17747, 11, 12, 'update_role', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17748, 11, 13, 'delete_role', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17749, 11, 9, 'all_user', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17750, 11, 10, 'save_user', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17751, 11, 93, 'edit_user', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17752, 11, 94, 'upadte_user', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17753, 11, 95, 'suspend_user', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17754, 11, 96, 'unsuspend_user', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17755, 11, 127, 'delete_user', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17756, 11, 130, 'test', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17757, 11, 131, 'menu/menu_create', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17758, 11, 133, 'menu/menu_save', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17759, 11, 134, 'menu/all_menu', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17760, 11, 135, 'menu/menu_search', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17761, 11, 138, 'menu/edit_menu', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17762, 11, 139, 'menu/update_menu', '2023-10-15 21:18:10', '2023-10-15 21:18:10'),
+(17763, 11, 274, 'password/change_pasword', '2023-10-15 21:18:11', '2023-10-15 21:18:11'),
+(17764, 11, 275, 'password/save_change_password', '2023-10-15 21:18:11', '2023-10-15 21:18:11');
 
 -- --------------------------------------------------------
 
@@ -331,11 +329,7 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id`, `name`, `slag`, `created_at`, `updated_at`) VALUES
 (11, 'Super Admin', 'super_admin', '2021-01-12 00:43:52', '2021-01-12 00:43:52'),
 (12, 'Admin', 'admin', '2021-01-21 02:25:27', '2021-01-21 02:25:27'),
-(14, 'Accounts', 'accounts', '2021-01-21 02:31:02', '2021-01-21 02:31:02'),
-(16, 'SubAdmin', 'subadmin', '2021-04-26 17:53:50', '2021-04-26 17:53:50'),
-(17, 'test', 'test', '2021-06-10 07:09:52', '2021-06-10 07:09:52'),
-(18, 'ratin_update', 'ratin_update', '2021-09-27 00:27:50', '2021-09-27 00:27:50'),
-(19, 'Pdf generate', 'pdf_generate', '2022-01-12 02:02:39', '2022-01-12 02:02:39');
+(16, 'SubAdmin', 'subadmin', '2021-04-26 17:53:50', '2021-04-26 17:53:50');
 
 -- --------------------------------------------------------
 
@@ -456,13 +450,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 
 --
 -- AUTO_INCREMENT for table `dynamic_routes`
 --
 ALTER TABLE `dynamic_routes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=288;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=402;
 
 --
 -- AUTO_INCREMENT for table `master_menu`
@@ -474,19 +468,19 @@ ALTER TABLE `master_menu`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `permission_roles`
 --
 ALTER TABLE `permission_roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14178;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17901;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
